@@ -7,7 +7,7 @@ spec:
     - name: shared-workspace
     - name: maven-settings
     - name: maven-local-m2
-    - name: ssh-directory
+    - name: git-credentials
   tasks:
     - name: fetch-repository
       taskRef:
@@ -15,8 +15,8 @@ spec:
       workspaces:
         - name: output
           workspace: shared-workspace
-        - name: ssl-ca-directory
-          workspace: ssh-directory
+        - name: ssh-directory
+          workspace: git-credentials
       params:
         - name: url
           value: git@code.siemens.com:rc-cn-it-la/backend/micro-message-service.git
@@ -61,6 +61,6 @@ spec:
     - name: maven-local-m2
       persistentvolumeclaim:
         claimName: maven-local-m2-pvc
-    - name: ssh-directory
+    - name: git-credentials
       secret:
         secretName: my-ssh-credentials
