@@ -19,9 +19,9 @@ spec:
           workspace: git-credentials
       params:
         - name: url
-          value: git@code.siemens.com:rc-cn-it-la/backend/micro-message-service.git
+          value: git@code.siemens.com:rc-cn-it-la/devops/la-task.git
         - name: revision
-          value: "develop"
+          value: "prod"
     - name: maven-run
       taskRef:
         name: maven
