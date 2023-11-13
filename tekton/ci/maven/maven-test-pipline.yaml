@@ -32,7 +32,9 @@ spec:
           value: "."
         - name: GOALS
           value:
-            - clean package -Dmaven.test.skip
+            - clean
+            - package
+            - -Dmaven.test.skip
       workspaces:
         - name: maven-settings
           workspace: maven-settings
