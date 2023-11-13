@@ -21,7 +21,7 @@ spec:
         - name: url
           value: git@code.siemens.com:rc-cn-it-la/backend/micro-message-service.git
         - name: revision
-          value: "aks-dev"
+          value: "develop"
     - name: maven-run
       taskRef:
         name: maven
