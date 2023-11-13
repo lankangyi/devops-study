@@ -16,5 +16,7 @@ spec:
       persistentVolumeClaim:
         claimName: shared-pvc
       subPath: shared-data
-
+  params:
+    - name: url
+      value: git@github.com:lankangyi/devops-study.git
 
