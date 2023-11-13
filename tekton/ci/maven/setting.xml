@@ -1,15 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-    <!-- 全局设置 -->
+    <localRepository>/root/local/repository</localRepository>
+
+
+    <servers>
+        <server>
+            <id>maven-snapshots</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>laregistry.azurecr.cn</id>
+            <username>laregistry</username>
+            <password>OHD42N8bP2b48qctBGGhREysnqsd/WvB</password>
+        </server>
+        <server>
+            <id>maven-releases</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>nexus</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>Snapshots</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>Releases</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>maven-nexus</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>maven-public</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>test</id>
+            <username>admin</username>
+            <password>Siemens_nexus_1016</password>
+        </server>
+        <server>
+            <id>dpp-nexus</id>
+            <username>dpp</username>
+            <password>dpp</password>
+        </server>
+        <server>
+            <id>dpp-test</id>
+            <username>dpp</username>
+            <password>dpp</password>
+        </server>
+        <server>
+            <id>dpp-maven-snapshots</id>
+            <username>dpp</username>
+            <password>dpp</password>
+        </server>
+        <server>
+            <id>dpp-maven-releases</id>
+            <username>dpp</username>
+            <password>dpp</password>
+        </server>
+        <server>
+            <id>registry.cn-hangzhou.aliyuncs.com</id>
+            <username>tb_zhang_yong</username>
+            <password>!Q2w3e4r5t</password>
+        </server>
+        <server>
+            <id>ericclizone-docker.pkg.coding.net</id>
+            <username>18580449315</username>
+            <password>u123*456</password>
+        </server>
+        <server>
+            <id>swr.cn-southwest-2.myhuaweicloud.com</id>
+            <username>cn-southwest-2@5YIW4JXKQG9HDPWRX6FP</username>
+            <password>26cddbc7bbc511433bf62a80b32132f873f619a8ebb3525f911952c8bfa2a5a7</password>
+        </server>
+    </servers>
+
+    <mirrors>
+
+        <mirror>
+            <id>dpp-nexus</id>
+            <name>dpp-nexus</name>
+            <url>http://nexus.faw-vw.in/repository/maven_dpp_group/</url>
+            <mirrorOf>resp1</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>siemens</id>
+            <name>siemens la</name>
+            <url>http://52.130.148.56:8081/repository/maven-public</url>
+            <mirrorOf>resp1</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>nexus</id>
+            <name>siemens la</name>
+            <url>http://52.130.148.56:8081/repository/maven-public</url>
+            <mirrorOf>resp1</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>alimaven</id>
+            <mirrorOf>central</mirrorOf>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+        </mirror>
+
+        <mirror>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+
+        <mirror>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <url>http://repo1.maven.org/maven2</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+
+        <mirror>
+            <id>repo2</id>
+            <mirrorOf>central</mirrorOf>
+            <name>Human Readable Name for this Mirror.</name>
+            <url>http://repo2.maven.org/maven2</url>
+        </mirror>
+
+        <mirror>
+            <id>ibiblio</id>
+            <mirrorOf>central</mirrorOf>
+            <name>Human Readable Name for this Mirror.</name>
+            <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+        </mirror>
+
+        <mirror>
+            <id>jboss-public-repository-group</id>
+            <mirrorOf>central</mirrorOf>
+            <name>JBoss Public Repository Group</name>
+            <url>http://repository.jboss.org/nexus/content/groups/public</url>
+        </mirror>
+
+        <mirror>
+            <id>google-maven-central</id>
+            <name>Google Maven Central</name>
+            <url>https://maven-central.storage.googleapis.com
+            </url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <!-- 中央仓库在中国的镜像 -->
+        <mirror>
+            <id>maven.net.cn</id>
+            <name>one of the central mirrors in china</name>
+            <url>http://maven.net.cn/content/groups/public</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+
+
     <profiles>
         <profile>
             <id>nexus</id>
             <repositories>
                 <repository>
-                    <id>nexus</id>
+                    <id>test</id>
                     <url>http://52.130.148.56:8081/repository/maven-public/</url>
                     <releases>
                         <enabled>true</enabled>
@@ -18,10 +188,11 @@
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
+
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
-                    <id>nexus</id>
+                    <id>test</id>
                     <url>http://52.130.148.56:8081/repository/maven-public/</url>
                     <releases>
                         <enabled>true</enabled>
@@ -32,50 +203,11 @@
                 </pluginRepository>
             </pluginRepositories>
         </profile>
-        <profile>
-            <id>aliyun</id>
-            <repositories>
-                <repository>
-                    <id>aliyun</id>
-                    <url>https://maven.aliyun.com/repository/public</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </snapshots>
-                </repository>
-            </repositories>
-        </profile>
+
     </profiles>
 
-    <!-- 激活上面定义的 profile -->
     <activeProfiles>
         <activeProfile>nexus</activeProfile>
-        <activeProfile>aliyun</activeProfile>
+        <activeProfile>myRepository1_2</activeProfile>
     </activeProfiles>
-
-    <servers>
-        <server>
-            <id>nexus</id>
-            <username>admin</username>
-            <password>Siemens_nexus_1016</password>
-        </server>
-    </servers>
-    <!-- Maven 中央仓库 -->
-    <mirrors>
-        <mirror>
-            <id>nexus</id>
-            <name>siemens la</name>
-            <url>http://52.130.148.56:8081/repository/maven-public</url>
-            <mirrorOf>central</mirrorOf>
-        </mirror>
-        <mirror>
-            <id>alimaven</id>
-            <mirrorOf>central</mirrorOf>
-            <name>aliyun maven</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        </mirror>
-    </mirrors>
 </settings>
