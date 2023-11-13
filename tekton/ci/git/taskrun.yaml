@@ -12,12 +12,9 @@ spec:
     - name: ssh-directory
       secret:
         secretName: my-ssh-credentials
-    - name: shared-data
-      volumeClaimTemplate:
-        spec:
-          accessModes:
-            - ReadWriteOnce
-          resources:
-            requests:
-              storage: 1Gi
+    - name: output
+      persistentVolumeClaim:
+        claimName: shared-pvc
+      subPath: shared-data
+
 
